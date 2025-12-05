@@ -7,9 +7,9 @@ interface RadioStationProps {
 const RadioStation = ({ description, img_src }: RadioStationProps) => {
   return (
     <>
-      <Card className="border-0">
+      <Card className="border-0 bg-dark text-light">
         <Card.Body>
-          <Card.Title className="small">NUOVA STAZIONE RADIO</Card.Title>
+          <Card.Title className="small fs-6 text-secondary">NUOVA STAZIONE RADIO</Card.Title>
           <Card.Text>{description}</Card.Text>
           <Card.Img src={img_src} className="rounded-2"/>
         </Card.Body>
