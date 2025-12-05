@@ -9,6 +9,7 @@ import NewRadioEpisodes from "./components/NewRadioEpisodes"
 import SmallHeadings from "./components/SmallHeadings"
 import SongPreview from "./components/SongPreview"
 import ExploreMenuElement from "./components/ExploreMenuElement"
+import MyFooter from "./components/myFooter"
 
 function App() {
   return (
@@ -93,8 +94,9 @@ function App() {
               <ExploreMenuElement title="Decenni" />
               <ExploreMenuElement title="Attività e stati d'animo" />
               <ExploreMenuElement title="Worldwide" />
-              <ExploreMenuElement title="Classifichenere" />
+              <ExploreMenuElement title="Classifiche" />
             </Row>
+            <MyFooter />
           </Col>
         </Row>
       </Container>
