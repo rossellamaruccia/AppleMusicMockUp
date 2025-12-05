@@ -8,10 +8,10 @@ interface ExploreMenuElementProps {
     const ExploreMenuElement = ({ title }: ExploreMenuElementProps) => {
     return (
       <>
-        <Row className="rounded-2 align-content-center text-danger my-2 p-3 bg-gradient">
+        <Row className="rounded-2 align-content-center redFont my-2 p-2 lighterBackground">
           <Col md={11}>
             <h5>{title}</h5>
-                </Col>
+          </Col>
           <Col md={1}>
             <MdKeyboardArrowRight />
           </Col>

@@ -11,8 +11,8 @@ import {
 const MusicPlayer = () => {
     return (
       <>
-        <Container fluid className="d-none d-md-block mt-3">
-          <Row className="p-3 bg-secondary">
+        <Container fluid className="d-none d-md-block lighterBackground">
+          <Row className="p-3">
             <Col className="px-3">
               <IoShuffle />
               <IoIosRewind />
@@ -21,7 +21,11 @@ const MusicPlayer = () => {
               <IoIosRepeat />
             </Col>
             <Col className="px-6 bg-gradient my-0 ">
-              <img src="public\assets\logos\apple.svg" alt="apple logo" />
+              <img
+                src="public\assets\logos\apple.svg"
+                alt="apple logo"
+                className="logo"
+              />
             </Col>
             <Col>
               <InputGroup>

@@ -5,7 +5,7 @@ const Headings = ({ title }: HeadingsProps) => {
   return (
     <>
       <h3>{title}</h3>
-      <hr />
+      <hr className="greyFont" />
     </>
   )
 }

@@ -41,7 +41,7 @@ const SongPreview = () => {
         songsDetails?.map((song, i) => {
           return (
             <>
-              <Col md={2} key={i}>
+              <Col xs={4} md={2} key={i}>
                 <img
                   src={song.album.cover}
                   alt="song's album preview"

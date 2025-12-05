@@ -8,16 +8,16 @@ import { IoIosRadio } from "react-icons/io"
 const MyNavbar = () => {
   return (
     <>
-      <Container>
+      <Container className="sideMenuBackground pb-3">
         <Row>
-          <Col className="d-md-none text-danger mt-3">
+          <Col className="d-md-none redFont mt-3">
             <HiOutlineMenuAlt4 className="" />
           </Col>
           <Col className="mt-3 text-light">
             <img src="public/assets/logos/music.svg"></img>
           </Col>
           <Col className="d-md-none mt-3">
-            <a href="#login" className="text-decoration-none text-danger ">
+            <a href="#login" className="text-decoration-none redFont ">
               Accedi
             </a>
           </Col>
@@ -28,7 +28,7 @@ const MyNavbar = () => {
               <Form.Label></Form.Label>
               <InputGroup>
                 <InputGroup.Text id="inputGroupPrepend">
-                  <CiSearch className="text-danger fs-5 m-2" />
+                  <CiSearch className="redFont fs-5 m-2" />
                 </InputGroup.Text>
                 <Form.Control
                   type="text"
@@ -40,22 +40,23 @@ const MyNavbar = () => {
             </Form.Group>
           </Form>
         </Row>
-        <Row className="d-none d-md-block mt-3">
+        <Row className="d-none d-md-block my-3">
           <h6>
-            <GoHome className="text-danger fs-6 m-2" />
+            <GoHome className="redFont fs-6 m-2" />
             Home
           </h6>
 
           <h6>
-            <PiSquaresFourLight className="text-danger fs-6 m-2" />
+            <PiSquaresFourLight className="redFont fs-6 m-2" />
             Novità
           </h6>
 
           <h6>
-            <IoIosRadio className="text-danger fs-6 m-2" />
+            <IoIosRadio className="redFont fs-6 m-2" />
             Radio
           </h6>
         </Row>
+        <Row className="mb-6"></Row>
       </Container>
     </>
   )
