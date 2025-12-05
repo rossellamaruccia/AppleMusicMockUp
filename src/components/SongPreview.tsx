@@ -22,8 +22,11 @@ const SongPreview = () => {
         }
       })
       .then((songs) => {
-        setSongsDetails(songs.data)
- 
+        const limitedSongsArray = []
+        for (let i = 0; i < 12; i++) {
+          limitedSongsArray.push(songs.data[i])
+          setSongsDetails(limitedSongsArray)
+        }
       })
         .catch((err) => {
           console.log("errore nella fetch", err)
