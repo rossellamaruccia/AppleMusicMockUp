@@ -23,7 +23,7 @@ const SongPreview = () => {
       })
       .then((songs) => {
         setSongsDetails(songs.data)
-        console.log(songsDetails)
+ 
       })
         .catch((err) => {
           console.log("errore nella fetch", err)
@@ -35,12 +35,12 @@ const SongPreview = () => {
   return (
     <>
       {
-        songsDetails?.map((song) => {
+        songsDetails?.map((song, i) => {
           return (
             <>
-              <Col md={2} key={song.id}>
+              <Col md={2} key={i}>
                 <img
-                  src={song.album.cover_small}
+                  src={song.album.cover}
                   alt="song's album preview"
                   className="w-100"
                 />
@@ -57,64 +57,3 @@ const SongPreview = () => {
 }
 
 export default SongPreview
-
-
-
-// export default SongPreview
-
-// import { useState, useEffect } from "react"
-// import NewsCard from "./NewsCard"
-// import { Container, Row, Col } from "react-bootstrap"
-// import { type Result } from "../types/types"
-
-// const myUrl: string = "https://api.spaceflightnewsapi.net/v4/articles"
-
-// const FetchComponent = () => {
-//   const [newsObj, setNewsObj] = useState<Result[]>([])
-
-//   const FetchFunc = () => {
-//     fetch(myUrl)
-//       .then((res) => {
-//         if (res.ok) {
-//           return res.json()
-//         } else {
-//           throw new Error()
-//         }
-//       })
-//       .then((NewsObj) => {
-//         console.log(NewsObj)
-//         console.log(NewsObj.results)
-//         setNewsObj(NewsObj.results)
-//       })
-//       .catch((err) => {
-//         console.log(err)
-//       })
-//   }
-
-//   useEffect(() => {
-//     FetchFunc()
-//   }, [])
-
-//   return (
-//     <>
-//       <Container>
-//         <Row className="justify-content-center">
-//           <Col>
-//             <h3 className="text-center">News from the infinite Space</h3>
-//           </Col>
-//         </Row>
-//         <Row className="justify-content-center">
-//           {newsObj.map((news) => {
-//             return (
-//               <Col xs={12} md={4}>
-//                 <NewsCard key={news.id} newsInfo={news} />
-//               </Col>
-//             )
-//           })}
-//         </Row>
-//       </Container>
-//     </>
-//   )
-// }
-
-// export default FetchComponent
